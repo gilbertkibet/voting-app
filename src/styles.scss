@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+//importing bootrap css
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//importing app.scss
+@import "./assets/sass/app.scss";
+//googlefonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,500&family=Roboto:wght@300&display=swap");
+@import "~ngx-toastr/toastr";
+
+input.invalid {
+  border-color: red;
+}
