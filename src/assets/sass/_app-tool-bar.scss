@@ -1,0 +1,8 @@
+app-tool-bar {
+  mat-tool-bar {
+    display: flex;
+    flex-direction: row;
+    justify-items: stretch;
+    justify-content: space-around;
+  }
+}

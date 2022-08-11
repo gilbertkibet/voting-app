@@ -1,56 +1,68 @@
+<app-tool-bar></app-tool-bar>
+<br />
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <div class="card" style="margin: 0">
+      <div class="card" style="height: 340px; width: 350px">
         <h2 class="card-title text-center">Register Leader</h2>
         <form #leaderForm="ngForm" novalidate autocomplete="off">
-          <div class="form-group">
-            <label for="">FullName</label>
-            <input
-              type="text"
-              class="form-control"
-              name="fullName"
-              #fullName="ngModel"
-              [(ngModel)]="leaderObject.fullName"
-              required
-              [class.invalid]="fullName.invalid && fullName.touched"
-            />
-            <small
-              *ngIf="fullName.invalid && fullName.touched"
-              class="text-danger"
-              >FullName is required</small
-            >
+          <div class="row">
+            <div class="form-group" style="margin-left: 20px">
+              <label for="">FullName</label>
+              <input
+                type="text"
+                class="form-control"
+                name="fullName"
+                #fullName="ngModel"
+                [(ngModel)]="leaderObject.fullName"
+                required
+                [class.invalid]="fullName.invalid && fullName.touched"
+                style="width: 300px"
+              />
+              <small
+                *ngIf="fullName.invalid && fullName.touched"
+                class="text-danger"
+                >FullName is required</small
+              >
+            </div>
           </div>
-          <br />
-          <div class="form-group">
-            <label for="">Position</label>
-            <input
-              type="text"
-              class="form-control"
-              name="position"
-              #position="ngModel"
-              [(ngModel)]="leaderObject.position"
-              required
-              [class.invalid]="position.invalid && position.touched"
-            />
 
-            <small
-              *ngIf="position.invalid && position.touched"
-              class="text-danger"
-              >Position is required</small
-            >
+          <br />
+          <div class="row">
+            <div class="form-group" style="margin-left: 20px">
+              <label for="">Position</label>
+              <input
+                type="text"
+                class="form-control"
+                name="position"
+                #position="ngModel"
+                [(ngModel)]="leaderObject.position"
+                required
+                [class.invalid]="position.invalid && position.touched"
+                style="width: 300px"
+              />
+
+              <small
+                *ngIf="position.invalid && position.touched"
+                class="text-danger"
+                >Position is required</small
+              >
+            </div>
           </div>
           <br />
-          <div class="form-group">
-            <button
-              type="button"
-              class="btn btn-primary"
-              type="submit"
-              (click)="addLeader()"
-              [disabled]="leaderForm.invalid"
-            >
-              Submit
-            </button>
+
+          <div class="row">
+            <div class="form-group" style="margin-left: 20px">
+              <button
+                type="button"
+                class="btn btn-primary"
+                type="submit"
+                (click)="addLeader()"
+                [disabled]="leaderForm.invalid"
+              >
+                <i class="fa fa-database" aria-hidden="true"></i> Submit
+              </button>
+            </div>
           </div>
         </form>
 

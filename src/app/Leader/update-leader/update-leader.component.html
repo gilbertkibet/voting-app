@@ -1,10 +1,12 @@
+<app-tool-bar></app-tool-bar>
+<br />
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <div class="card" style="margin: 0">
-        <h2 class="card-title text-center">Leader</h2>
+      <div class="card" style="height: 340px; width: 350px">
+        <h2 class="card-title text-center">Update Leader</h2>
         <form #leaderForm="ngForm">
-          <div class="form-group">
+          <div class="form-group" style="margin-left: 20px">
             <label for="">FullName</label>
             <input
               type="text"
@@ -14,6 +16,7 @@
               [(ngModel)]="leaderObject.fullName"
               required
               [class.invalid]="fullName.invalid && fullName.touched"
+              style="width: 300px"
             />
             <small
               *ngIf="fullName.invalid && fullName.touched"
@@ -22,7 +25,7 @@
             >
           </div>
           <br />
-          <div class="form-group">
+          <div class="form-group" style="margin-left: 20px">
             <label for="">Position</label>
             <input
               type="text"
@@ -32,6 +35,7 @@
               [(ngModel)]="leaderObject.position"
               required
               [class.invalid]="position.invalid && position.touched"
+              style="width: 300px"
             />
 
             <small
@@ -41,7 +45,7 @@
             >
           </div>
           <br />
-          <div class="form-group">
+          <div class="form-group" style="margin-left: 20px">
             <button
               type="button"
               class="btn btn-primary"
@@ -49,7 +53,7 @@
               (click)="updateLeader()"
               [disabled]="leaderForm.invalid"
             >
-              Submit
+              <i class="fa fa-database" aria-hidden="true"></i> Submit
             </button>
           </div>
         </form>

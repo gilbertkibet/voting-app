@@ -11,6 +11,7 @@ import { LeaderListComponent } from './Leader/leader-list/leader-list.component'
 import { AddLeaderComponent } from './Leader/add-leader/add-leader.component';
 import { UpdateLeaderComponent } from './Leader/update-leader/update-leader.component';
 import { ToolBarComponent } from './layout/tool-bar/tool-bar.component';
+import { StudentVoteComponent } from './student-vote/student-vote.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ToolBarComponent } from './layout/tool-bar/tool-bar.component';
     AddLeaderComponent,
     UpdateLeaderComponent,
     ToolBarComponent,
+    StudentVoteComponent,
   ],
   imports: [
     BrowserModule,

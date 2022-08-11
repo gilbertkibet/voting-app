@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeaderObj } from 'src/app/interfaces/leaders';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-leader-list',
@@ -9,7 +10,7 @@ import { LeaderObj } from 'src/app/interfaces/leaders';
 export class LeaderListComponent implements OnInit {
   leaderList: LeaderObj[] = [];
 
-  constructor() {}
+  constructor(private toastr: ToastrService) {}
 
   ngOnInit(): void {
     const records = localStorage.getItem('leaderList');
@@ -28,6 +29,7 @@ export class LeaderListComponent implements OnInit {
       // leaderList.push(this.leaderObject);
 
       localStorage.setItem('leaderList', JSON.stringify(leaderList));
+      this.toastr.error('Process Succeeded', 'eBallot');
     }
     const records = localStorage.getItem('leaderList');
     if (records !== null) {

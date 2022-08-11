@@ -1,12 +1,12 @@
-<div class="card">
+<div class="card" style="width: 500px">
   <h2 class="card-title text-center">Leader List</h2>
-  <table class="table">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>Index</th>
         <th scope="col">FullName</th>
         <th scope="col">Position</th>
-        <th scope="col">Actions</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -14,18 +14,18 @@
         <td>{{ i + 1 }}</td>
         <td>{{ leader.fullName }}</td>
         <td>{{ leader.position }}</td>
-        <td>
+        <td style="display: flex; justify-content: space-evenly">
           <button
             class="btn btn-sm btn-success"
             [routerLink]="['/updateleader', leader.leaderId]"
           >
-            Edit
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
           </button>
           <button
             (click)="deleteLeader(leader.leaderId)"
             class="btn btn-sm btn-danger"
           >
-            Delete
+            <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
           </button>
         </td>
       </tr>
