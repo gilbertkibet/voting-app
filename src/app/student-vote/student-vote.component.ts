@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { LeaderObj } from '../interfaces/leaders';
 
 @Component({
   selector: 'app-student-vote',
   templateUrl: './student-vote.component.html',
-  styleUrls: ['./student-vote.component.scss']
+  styleUrls: ['./student-vote.component.scss'],
 })
 export class StudentVoteComponent implements OnInit {
-
-  constructor() { }
+  leaderList: LeaderObj[] = [];
+  votes: number = 0;
+  constructor() {}
 
   ngOnInit(): void {
+    const records = localStorage.getItem('leaderList');
+    if (records !== null) {
+      this.leaderList = JSON.parse(records);
+    }
   }
-
 }
