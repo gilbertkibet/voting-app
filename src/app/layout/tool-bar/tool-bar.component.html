@@ -1,16 +1,26 @@
-<p>
-  <mat-toolbar color="primary" style="display: flex; flex-direction: row">
+<!-- <mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Welcome To eBallot</span>
+
+  <button mat-raised-button color="accent" style="margin-right: 0px">
+    LOGOUT
+  </button>
+</mat-toolbar> -->
+<nav class="navbar navbar-dark bg-primary justify-content-between">
+  <a class="navbar-brand">Welcome to eBallot</a>
+  <form class="form-inline">
     <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
+      class="btn btn-danger my-2 my-sm-0"
+      type="submit"
+      routerLink="/login"
     >
-      <mat-icon>menu</mat-icon>
+      LOGOUT
     </button>
-    <span>Welcome To eBallot</span>
-
-    <button type="button" mat-raised-button color="primary">LOGOUT</button>
-  </mat-toolbar>
-</p>
-
-<app-add-leader></app-add-leader>
+  </form>
+</nav>

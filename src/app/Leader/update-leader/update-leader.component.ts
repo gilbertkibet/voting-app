@@ -63,7 +63,7 @@ export class UpdateLeaderComponent implements OnInit {
     //   localStorage.setItem('leaderList', JSON.stringify(leaderArr));
     // }
 
-    this.toastr.success('Process Succeeded', 'eBallot');
+    this.toastr.info('Process Succeeded', 'eBallot');
   }
 
   resetForm(leaderForm: NgForm) {
