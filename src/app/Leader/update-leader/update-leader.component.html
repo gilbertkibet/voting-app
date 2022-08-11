@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card" style="margin: 0">
+        <h2 class="card-title text-center">Leader</h2>
+        <form #leaderForm="ngForm">
+          <div class="form-group">
+            <label for="">FullName</label>
+            <input
+              type="text"
+              class="form-control"
+              name="fullName"
+              #fullName="ngModel"
+              [(ngModel)]="leaderObject.fullName"
+              required
+              [class.invalid]="fullName.invalid && fullName.touched"
+            />
+            <small
+              *ngIf="fullName.invalid && fullName.touched"
+              class="text-danger"
+              >FullName is required</small
+            >
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="">Position</label>
+            <input
+              type="text"
+              class="form-control"
+              name="position"
+              #position="ngModel"
+              [(ngModel)]="leaderObject.position"
+              required
+              [class.invalid]="position.invalid && position.touched"
+            />
+
+            <small
+              *ngIf="position.invalid && position.touched"
+              class="text-danger"
+              >Position is required</small
+            >
+          </div>
+          <br />
+          <div class="form-group">
+            <button
+              type="button"
+              class="btn btn-primary"
+              type="submit"
+              (click)="updateLeader()"
+              [disabled]="leaderForm.invalid"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+
+        <br />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <app-leader-list></app-leader-list>
+    </div>
+  </div>
+</div>

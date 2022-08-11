@@ -1,0 +1,41 @@
+<mat-card class="card">
+  <h3 class="text-center">Welcome To eBallot Login To Continue</h3>
+  <mat-card-content>
+    <mat-tab-group mat-align-tabs="start" animationDuration="1000ms">
+      <mat-tab label="ADMIN">
+        <mat-form-field class="example-full-width input-sm">
+          <mat-label>
+            <i class="fa fa-key" aria-hidden="true"></i>
+            Enter Password</mat-label
+          >
+          <input type="password" matInput placeholder="Password" required />
+        </mat-form-field>
+        <br />
+        <br />
+        <button
+          type="button"
+          mat-raised-button
+          color="primary"
+          routerLink="/admin"
+        >
+          ADMIN LOGIN
+        </button>
+      </mat-tab>
+
+      <mat-tab label="STUDENT">
+        <mat-form-field class="example-full-width input-sm">
+          <mat-label>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            Student Number</mat-label
+          >
+          <input type="email" matInput placeholder="studentnumber" required />
+        </mat-form-field>
+        <br />
+        <br />
+        <button type="button" mat-raised-button color="primary">
+          STUDENT LOGIN
+        </button>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
