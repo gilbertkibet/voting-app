@@ -1,5 +1,31 @@
 <app-tool-bar></app-tool-bar>
-
+<br />
 <div class="container">
-  <app-leader-list></app-leader-list>
+  <div class="card" style="width: 500px">
+    <h2 class="card-title text-center text-capitalize">
+      Vote for Leader of Your choice
+    </h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">FullName</th>
+          <th scope="col">Position</th>
+          <th>Vote Here</th>
+          <th>NoVotes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let leader of leaderList; let i = index">
+          <td>{{ leader.fullName }}</td>
+          <td>{{ leader.position }}</td>
+          <td>
+            <button class="btn btn-info">
+              <i class="fa fa-check" aria-hidden="true"></i>Vote
+            </button>
+          </td>
+          <td>{{ votes }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
