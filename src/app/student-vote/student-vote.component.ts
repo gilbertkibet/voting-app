@@ -9,6 +9,7 @@ import { LeaderObj } from '../interfaces/leaders';
 export class StudentVoteComponent implements OnInit {
   leaderList: LeaderObj[] = [];
   votes: number = 0;
+
   constructor() {}
 
   ngOnInit(): void {
@@ -18,3 +19,10 @@ export class StudentVoteComponent implements OnInit {
     }
   }
 }
+
+let voteBtn: any = document.querySelector('#votebtn');
+let input1: any = document.querySelector('#input1');
+
+voteBtn?.addEventListener('click', () => {
+  input1.value = parseInt(input1.value) + 1;
+});

@@ -1,5 +1,6 @@
 <app-tool-bar></app-tool-bar>
 <br />
+<br />
 <div class="container">
   <div class="card" style="width: 500px">
     <h2 class="card-title text-center text-capitalize">
@@ -19,11 +20,13 @@
           <td>{{ leader.fullName }}</td>
           <td>{{ leader.position }}</td>
           <td>
-            <button class="btn btn-info">
+            <button id="votebtn" class="btn btn-info">
               <i class="fa fa-check" aria-hidden="true"></i>Vote
             </button>
           </td>
-          <td>{{ votes }}</td>
+          <td>
+            <input id="input1" type="number" value="0" />
+          </td>
         </tr>
       </tbody>
     </table>
