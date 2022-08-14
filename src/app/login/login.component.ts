@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   hide = true;
 
-  constructor() {}
+  constructor(private router: Router, private toastr: ToastrService) {}
 
   ngOnInit(): void {}
-}
 
-// logIn() {
-//   this.toastr.success('Login Successfull');
-//   this.router.navigate(['/administrator/home']);
-// }
+  loginToAdmin() {
+    this.router.navigate(['/registerleader']);
+    this.toastr.success('Process Succeeded', 'eBallot');
+  }
+  loginToStudent() {
+    this.router.navigate(['/studentvote']);
+    this.toastr.success('Process Suceeded', 'eBallot');
+  }
+}

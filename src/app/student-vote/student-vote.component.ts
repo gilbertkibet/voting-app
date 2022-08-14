@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LeaderObj } from '../interfaces/leaders';
 
 @Component({
@@ -18,11 +18,7 @@ export class StudentVoteComponent implements OnInit {
       this.leaderList = JSON.parse(records);
     }
   }
+  onButtonClick() {
+    return (this.votes = +1);
+  }
 }
-
-let voteBtn: any = document.querySelector('#votebtn');
-let input1: any = document.querySelector('#input1');
-
-voteBtn?.addEventListener('click', () => {
-  input1.value = parseInt(input1.value) + 1;
-});
