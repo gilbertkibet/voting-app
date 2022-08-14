@@ -18,7 +18,7 @@
           type="button"
           mat-raised-button
           color="primary"
-          routerLink="/registerleader"
+          (click)="loginToAdmin()"
         >
           ADMIN LOGIN
         </button>
@@ -40,6 +40,7 @@
           type="button"
           mat-raised-button
           color="primary"
+          (click)="loginToStudent()"
           routerLink="/studentvote"
         >
           STUDENT LOGIN
